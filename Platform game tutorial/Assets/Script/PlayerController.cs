@@ -5,10 +5,11 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float speed = 0.5f;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -18,29 +19,28 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKey("w"))
         {
-            newPosition.y += speed;
 
+            newPosition.y += speed;
         }
 
         if (Input.GetKey("s"))
         {
-            newPosition.y -= speed;
 
+            newPosition.y -= speed;
         }
+
 
         if (Input.GetKey("a"))
         {
             newPosition.x -= speed;
-
         }
 
-        if (Input.GetKey("a"))
+
+        if (Input.GetKey("d"))
         {
             newPosition.x += speed;
-
         }
 
         transform.position = newPosition;
-
     }
 }
